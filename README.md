@@ -5,7 +5,7 @@ Backend: Spring Boot application (Java) exposing a REST API to manage vehicles.
 Frontend: React application to display and interact with vehicle data.
 Database: MariaDB storing vehicle information.
 
-All components are containerized using Docker, and the .tar images are provided so you can run the project without building it from source.
+It is fully containerized using Docker. You can run it without building anything from source by using the pre-built Docker images.
 
 ## **Docker Images**
 The following Docker images are included:
@@ -15,11 +15,13 @@ The following Docker images are included:
 | `react-app:latest`      | Frontend React application                 |
 | `mariadb:11`            | MariaDB database (optional, preconfigured) |
 
-## 1. Load Docker Images
+## 1. Pull Docker Images
 
-    docker load -i springboot-app.tar
-    docker load -i react-app.tar
-    docker load -i mariadb.tar
+ docker pull ghizlane25/springboot-app:latest
+
+ docker pull ghizlane25/react-app:latest
+
+ docker pull ghizlane25/mariadb:11
 
 ## 2. Run MariaDB
 
